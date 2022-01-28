@@ -5,23 +5,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Creepster&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
     <title>David Lansonneur</title>
 </head>
 
 <body>
     <header id="about-me">
-        <nav-bar>
-            <ol>
-                <a href="#about-me"><li>About Me</li></a>
-                <a href="#formation"><li>Formation</li></a>
-                <a href="#experiences"><li>Expériences</li></a>
-                <a href="#projects"><li>Projects</li></a>
-                <a href="#contact"><li>Contact</li></a>
-            </ol>
-            <a href="documents/CV David Lansonneur.pdf" target="_blank"><button>
-                    <img src="images/Presentation/Icon-Download-Pain.png" alt="image telechargement" />Resume
-                </button></a>
-        </nav-bar>
+        <div id="root">
+            <div id="topnav" class="topnav">
+          
+              <!-- Classic Menu -->
+              <nav role="navigation" id="topnav_menu">
+                <a class="topnav_link" href="#about-me">ABOUT ME</a>
+                <a class="topnav_link" href="#formation">FORMATION</a>
+                <a class="topnav_link" href="#experiences">EXPERIENCES</a>
+                <a class="topnav_link" href="#projects">PROJECTS</a>
+                <a class="topnav_link" href="#contact">CONTACT</a>
+              </nav>
+              <a href="documents/CV David Lansonneur.pdf" target="_blank"><button id="button-resume">
+                <img src="images/Presentation/Icon-Download-Pain.png" alt="image telechargement" id="image-resume"/>Resume
+            </button></a>
+          
+              <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+                <!-- Some spans to act as a hamburger -->
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+          
+              <!-- Responsive Menu -->
+              <nav role="navigation" id="topnav_responsive_menu">
+                <ul>
+                  <li><a href="/about">ABOUT ME</a></li>
+                  <li><a href="/contact-us">FORMATION</a></li>
+                  <li><a href="/privacy-policy">EXPERIENCES</a></li>
+                  <li><a href="/terms-and-conditions">PROJECTS</a></li>
+                  <li><a href="/terms-and-conditions">CONTACT</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         <div class="block_presentation">
             <div class="logo-reseau">
                 <a href="https://www.facebook.com/dlansonneur/" target="_blank"><img
@@ -33,39 +58,44 @@
                 <a href="https://www.linkedin.com/in/david-lansonneur-05b40b226/" target="_blank"><img
                         src="images/Presentation/icons8-linkedin-48.png" alt="logo linkedin" /></a>
             </div>
-            <div>
+            <div class="block-moi">
                 <h1>David Lansonneur</h1>
                 <h1>IT Developer</h1>
                 <p>
                     Bonjour, je suis en en 1ère année de développeur Informatique à CESI
-                    Brest. Je suis passioné par le Développement Web. Je souhaite en
+                    Brest.<br> Je suis passioné par le Développement Web. Je souhaite en
                     faire mon métier. Actuellement je recherche un stage du 25 avril au
                     17 juin 2022.
                 </p>
+                <a href="documents/CV David Lansonneur.pdf" target="_blank"><button id="button-resume-responsive">
+                    <img src="images/Presentation/Icon-Download-Pain.png" alt="image telechargement" id="image-resume"/>Resume
+                </button></a>
             </div>
         </div>
     </header>
     <!-------------------------------------------------FORMATION---------------------------------------------->
-    <div class="block-formation" id="formation">
-        <h2>Formations</h2>
+    <div class="block-formation" id="formation">  
+        <div id="test-formation">
+            <h2 id="title-formation">Formations</h2>
+        </div>     
         <div class="block-etude">
             <div class="block-diplomes">
-                <h3>2011-2014</h3>
-                <p>
+                <h3 class="title-years">2011 - 2014</h3>
+                <p class="paragraphe-diplome">
                     Back STMG option gestion fiance<br /><br />Lycée du Léon -
                     Landivisiau
                 </p>
             </div>
             <div class="block-diplomes">
-                <h3>2014-2016</h3>
-                <p>
+                <h3 class="title-years">2014 - 2016</h3>
+                <p class="paragraphe-diplome">
                     BTS Comptabilité et Gestion des Organisations<br /><br />Lycée Jules
                     Lesven - Brest
                 </p>
             </div>
             <div class="block-diplomes">
-                <h3>2021-2022</h3>
-                <p>
+                <h3 class="title-years">2021 - 2022</h3>
+                <p class="paragraphe-diplome">
                     1ère année Développeur Informatique<br /><br />CESI - École
                     Supérieur de l'Alternance
                 </p>
@@ -74,13 +104,15 @@
     </div>
     <!-------------------------------------------------COMPETENCES-------------------------------------------->
     <div class="block-competences">
-        <h2>Competences</h2>
+        <div id="test-formation">
+            <h2 id="title-formation">Competences</h2>
+        </div>
         <div class="block-langage-outil">
             <div class="block-comp" id="langages">
-                <h3>Langages</h3>
+                <h3 class="title-comp">Langages</h3>
                 <div id="main-langages">
-                    <h2>Main</h2>
-                    <div>
+                    <h2 class="title-main">Main</h2>
+                    <div class="jpp">
                         <img src="images/Competences/icons8-html-5-48.png" alt="logo HTML 5" />
                         <img src="images/Competences/icons8-css3-48.png" alt="logo css 3" />
                         <img src="images/Competences/icons8-javascript-48.png" alt="logo Javascript" />
@@ -89,8 +121,8 @@
                     </div>
                 </div>
                 <div id="learning-langages">
-                    <h2>In training</h2>
-                    <div>
+                    <h2 class="title-main">In training</h2>
+                    <div class="jpp">
                         <img src="images/Competences/php.png" alt="logo PHP" />
                         <img src="images/Competences/icons8-c-sharp-logo-2-48.png" alt="logo C sharp" />
                         <img src="images/Competences/icons8-angularjs-48.png" alt="logo Angular JS" />
@@ -98,10 +130,10 @@
                 </div>
             </div>
             <div class="block-comp" id="outils">
-                <h3>Outils</h3>
+                <h3 class="title-comp">Outils</h3>
                 <div id="main-outils">
-                    <h2>Main</h2>
-                    <div>
+                    <h2 class="title-main">Main</h2>
+                    <div class="jpp">
                         <img src="images/Competences/icons8-visual-studio-code-2019-48.png" alt="logo VS code" />
                         <img src="images/Competences/icons8-filezilla-48.png" alt="logo filzilla" />
                         <img src="images/Competences/SQLWorkbench.png" alt="logo SQL Workbench" />
@@ -109,8 +141,8 @@
                     </div>
                 </div>
                 <div id="learning-outils">
-                    <h2>In training</h2>
-                    <div>
+                    <h2 class="title-main">In training</h2>
+                    <div class="jpp">
                         <img src="images/Competences/balsamiq-mockups-qAO8L7.png" alt="logo logiciel balsamiq" />
                         <img src="images/Competences/icons8-adobe-photoshop-48.png" alt="logo photoshop" />
                         <img src="images/Competences/icons8-microsoft-powerpoint-2019-48.png" alt="logo powerpoint" />
@@ -279,3 +311,5 @@
 </body>
 
 </html>
+
+<a href="mailto:observatoire.populaire.rouen@orange.fr"></a>

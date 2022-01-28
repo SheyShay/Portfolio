@@ -1,0 +1,400 @@
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    margin: auto;
+    width: 100%;
+    background: #2f2f2f;
+    color: white;
+}
+h1,h2,h3,h4,h5{
+    font-family: 'Acme', sans-serif;
+}
+button{
+    font-family: 'Creepster', cursive;
+}
+a{
+    text-decoration: none;
+}
+/*---------------------------------------------HEADER------------------------------------------------------- */
+header{
+    background: #2f2f2f;
+    color: white;
+}
+ol{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+li{
+    list-style: none;
+    color: white;
+    font-size: 1.8em;
+}
+
+#button-resume{
+    background: #2f2f2f;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3em;
+    margin-right: 10px;
+}
+#image-resume{
+    width: 20%;
+}
+.block_presentation{
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10vh;
+}
+.logo-reseau{
+    width: 4%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 28vh;
+}
+.logo-reseau img{
+    width: 100%;
+}
+.block-moi{
+    margin-top: 15vh;
+    font-size: 2.8vh;
+    width: 95%;
+    text-align: center;
+}
+#button-resume-responsive{
+    visibility: hidden;
+}
+
+@media(max-width: 1024px){
+    #button-resume-responsive{
+        background: #2f2f2f;
+        color: white;
+        font-size: 1.3em;
+    }
+    #button-resume{
+        display: none;
+    }
+    .logo-reseau{
+        display: none;
+    }
+    .block-moi{
+        margin-top: 0vh;
+    }
+    #button-resume-responsive{
+        visibility: visible;
+    }
+}
+/*------------------------------------------ TEST ----------------------------------------------- */
+/* ******************** NAV BAR ******************** */
+.topnav {
+    background-color: #2f2f2f;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 2em;
+    position: fixed
+  }
+  .topnav_link {
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+  }
+  .topnav_link:hover {
+    color: #0078b4;
+  }
+  
+  /* hide responsive menu */
+  #topnav_hamburger_icon,
+  #topnav_responsive_menu {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    /* hide classic menu */
+    #topnav_menu {
+      display: none;
+    }
+    .topnav {
+        font-size: 1em;
+      }
+  
+    /* position home link at left and hamburger at right */
+    #home_link {
+      flex-grow: 1;
+    }
+  
+    /* disable horizontal scrolling  */
+    #root {
+      position: relative;
+      overflow-x: hidden;
+    }
+  
+    /* show responsive menu and position at the right of the screen */
+    #topnav_responsive_menu {
+      display: block;
+      position: absolute;
+      margin: 0;
+      right: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+  
+      z-index: 99;
+  
+      transform-origin: 0% 0%;
+      transform: translate(200%, 0);
+  
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    }
+  
+    #topnav_responsive_menu ul {
+      display: flex;
+      flex-direction: column;
+  
+      position: absolute;
+      margin: 0;
+      right: 0;
+      top: 0;
+  
+      min-width: 50vw;
+      height: 100vh;
+      padding: 56px 0 0;
+  
+      text-align: center;
+  
+      background: #ededed;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+    }
+  
+    #topnav_responsive_menu li {
+      padding: 12px 24px;
+    }
+  
+    #topnav_responsive_menu a {
+      white-space: nowrap;
+      color: #333;
+      text-decoration: none;
+    }
+  
+    /* And let's slide it in from the right */
+    #topnav_responsive_menu.open {
+      transform: none;
+      position: fixed;
+    }
+  
+    /* ******************** HAMBURGER ICON ******************** */
+    /* define size and position of the hamburger link */
+    #topnav_hamburger_icon {
+      display: block;
+      position: relative;
+      margin: 16px;
+      width: 33px;
+      height: 28px;
+  
+      z-index: 100;
+  
+      -webkit-user-select: none;
+      user-select: none;
+      cursor: pointer;
+    }
+  
+    /* define the style (size, color, position, animation, ...) of the 3 spans */
+    #topnav_hamburger_icon span {
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      margin-bottom: 5px;
+  
+      background: #ededed;
+      border-radius: 3px;
+  
+      z-index: 100;
+  
+      opacity: 1;
+      left: 0;
+  
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
+    }
+  
+    /* set the 3 spans position to look like a hamburger */
+    #topnav_hamburger_icon span:nth-child(1) {
+      top: 0px;
+      -webkit-transform-origin: left top;
+      -moz-transform-origin: left top;
+      -o-transform-origin: left top;
+      transform-origin: left top;
+    }
+    #topnav_hamburger_icon span:nth-child(2) {
+      top: 12px;
+      -webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -o-transform-origin: left center;
+      transform-origin: left center;
+    }
+    #topnav_hamburger_icon span:nth-child(3) {
+      top: 24px;
+      -webkit-transform-origin: left bottom;
+      -moz-transform-origin: left bottom;
+      -o-transform-origin: left bottom;
+      transform-origin: left bottom;
+    }
+  
+    /* change color when opening the menu */
+    #topnav_hamburger_icon.open span {
+      background: #333;
+    }
+  
+    /* the first span rotates 45° \ */
+    #topnav_hamburger_icon.open span:nth-child(1) {
+      width: 110%;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  
+    /* the second span disappears */
+    #topnav_hamburger_icon.open span:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+  
+    /* the last span rotates -45° / */
+    #topnav_hamburger_icon.open span:nth-child(3) {
+      width: 110%;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+
+/*------------------------------------------ FORMATION ----------------------------------------------- */
+.block-formation{
+    background-color: rgb(4, 4, 73);
+    color: white;
+    font-size: 1.3em;
+    padding-top: 0.2vh;
+    padding-bottom: 30px;
+}
+
+.block-etude{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#test-formation{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#title-formation{
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    background: rgb(1, 121, 121);
+    border: 3px solid black;
+}
+.block-diplomes{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.title-years{
+    margin: 0;
+}
+.paragraphe-diplome{
+    margin: 0;
+    background: rgb(1, 56, 78);
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+@media(max-width: 1024px){
+    .block-etude{
+        flex-direction: column;
+    }
+    .block-diplomes{
+        width: 100%;
+    }
+    .block-etude{
+        gap: 30px;
+    }
+    .title-years{
+        text-align: center;
+    }
+}
+/*------------------------------------------ COMPETENCES -------------------------------------------- */
+.block-competences{
+    background-color: rgb(4, 4, 73);
+    color: white;
+    font-size: 1.3em;
+    padding-top: 0.2vh;
+    padding-bottom: 30px;
+}
+.block-competences img{
+    width: 15%;
+}
+.block-langage-outil{
+    display: flex;
+    justify-content: space-around;
+}
+.block-comp{
+    width: 40%;
+    height: auto;
+    background: rgba(2, 133, 194, 0.699);
+    display: flex;
+    flex-direction: column;
+}
+.title-main{
+    width: 35%;
+    background: forestgreen;
+}
+.title-comp{
+    margin: 0;
+    font-size: 1.7em;
+    text-align: center;
+    background: rgb(1, 121, 121);
+}
+.jpp{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+@media(max-width: 1024px){
+    .block-langage-outil{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .block-comp{
+        width: auto;
+        height: auto;
+    }
+    .block-competences img{
+        width: 20%;
+    }
+}
+/*------------------------------------------ PROJECTS ----------------------------------------------- */
+.block-projects img{
+    display: none;
+}
