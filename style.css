@@ -6,8 +6,8 @@ body{
     font-family: 'Ubuntu Condensed', sans-serif;
     margin: auto;
     width: 100%;
-    background: #2f2f2f;
-    color: white;
+    background: white;
+    /* color: white; */
 }
 h1,h2,h3,h4,h5{
     font-family: 'Acme', sans-serif;
@@ -19,10 +19,11 @@ a{
     text-decoration: none;
 }
 /*---------------------------------------------HEADER------------------------------------------------------- */
-header{
-    background: #2f2f2f;
-    color: white;
-}
+/* header{
+    background: url('images/Presentation/fondecran.jpg') no-repeat;
+    font-size: cover;
+    object-fit: cover;
+} */
 ol{
     display: flex;
     flex-direction: row;
@@ -123,6 +124,7 @@ li{
     }
     .topnav {
         font-size: 1em;
+        position: relative;
       }
   
     /* position home link at left and hamburger at right */
@@ -287,7 +289,7 @@ li{
 
 /*------------------------------------------ FORMATION ----------------------------------------------- */
 .block-formation{
-    background-color: rgb(4, 4, 73);
+    background-color: rgb(9, 168, 189);
     color: white;
     font-size: 1.3em;
     padding-top: 0.2vh;
@@ -299,21 +301,22 @@ li{
     flex-direction: row;
     justify-content: space-evenly;
 }
-#test-formation{
+.test-formation{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#title-formation{
+.title-formation{
     font-size: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 10px;
-    background: rgb(1, 121, 121);
+    background: rgba(2, 74, 107, 0.699);
     border: 3px solid black;
 }
+
 .block-diplomes{
     width: 25%;
     display: flex;
@@ -325,7 +328,9 @@ li{
 }
 .paragraphe-diplome{
     margin: 0;
-    background: rgb(1, 56, 78);
+    background: rgba(2, 74, 107, 0.699);
+    height: 13vh;
+    padding-top: 15px;
     font-size: 1.2em;
     text-align: justify;
 }
@@ -343,12 +348,14 @@ li{
     .title-years{
         text-align: center;
     }
+    .paragraphe-diplome{
+        height: auto;
+    }
 }
 /*------------------------------------------ COMPETENCES -------------------------------------------- */
 .block-competences{
-    background-color: rgb(4, 4, 73);
+    background-color: rgb(9, 168, 189);
     color: white;
-    font-size: 1.3em;
     padding-top: 0.2vh;
     padding-bottom: 30px;
 }
@@ -359,10 +366,20 @@ li{
     display: flex;
     justify-content: space-around;
 }
+#title-competence{
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    background: rgba(2, 74, 107, 0.699);
+    border: 3px solid black;
+    color: white;
+}
 .block-comp{
     width: 40%;
     height: auto;
-    background: rgba(2, 133, 194, 0.699);
+    background: rgba(2, 74, 107, 0.699);
     display: flex;
     flex-direction: column;
 }
@@ -372,14 +389,14 @@ li{
 }
 .title-comp{
     margin: 0;
-    font-size: 1.7em;
+    font-size: 1.8em;
     text-align: center;
     background: rgb(1, 121, 121);
 }
 .jpp{
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 25px;
 }
 @media(max-width: 1024px){
     .block-langage-outil{
@@ -394,7 +411,235 @@ li{
         width: 20%;
     }
 }
+/*------------------------------------------ EXPERIENCES ----------------------------------------------- */
+#title-xp{
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    background: rgba(2, 74, 107, 0.699);
+    border: 3px solid black;
+    color: white;
+}
+
+.block-experiences{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+.block-experiences img{
+    width: 100%;
+}
+.block-diplomes1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 2em;
+}
+
+.block-xp1{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    background: rgb(9, 168, 189);
+    color: white;
+}
+
+.block-photo1{
+    width: 40%;
+}
+@media (max-width: 1024px){
+    .block-diplomes1{
+        font-size: 1em;
+    }
+}
 /*------------------------------------------ PROJECTS ----------------------------------------------- */
 .block-projects img{
-    display: none;
+    width: auto;
+    height: 60%;
+}
+.fenetre-modale{
+    width: 20%;
+}
+
+.block-projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: rgb(9, 168, 189);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#block-gauche{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#block-droit{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.block-paragraphe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.block-projet{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    height: 70vh;
+}
+@media (max-width: 1024px){
+    .block-projects{
+        flex-direction: column;
+        width: auto;
+        gap: 40px;
+    }
+    #block-gauche{
+        width: 100%;
+    }
+    #block-droit{
+        width: 100%;
+    }
+}
+
+/* -------------------------------------------FOOTER--------------------------------------------------------- */
+.block-contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+.block-reseau{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.block-reseau a{
+    font-size: 1.2em;
+    color: white;
+}
+#paragraphe-mail{
+    color: black;
+}
+.reseau{
+    display: flex;
+    flex-direction: row;
+}
+#mail{
+    width: 30%;
+}
+#mail p{
+    font-size: 1.2em;
+}
+.font-reseau{
+    width: 30%;
+}
+.font-reseau p{
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+}
+#title-contact{
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    background: rgba(2, 74, 107, 0.699);
+    border: 3px solid black;
+    color: white;
+}
+#facebook{
+    background: rgb(0, 195, 255);
+}
+#linkedin{
+    background: rgb(0, 68, 255);
+}
+#github{
+    background: rgb(33, 39, 41);
+}
+#instagram{
+    background: rgb(223, 82, 0);
+}
+@media(max-width: 1024px){
+    .block-contact{
+        flex-direction: column;
+    }
+    .block-reseau{
+        width: auto;
+    }
+    #facebook{
+        width: 100%;
+    }
+    #instagram{
+        width: 100%;
+    }
+    #github{
+        width: 100%;
+    }
+    #linkedin{
+        width: 100%;
+    }
+}
+/*------------------------------------------- FORMULAIRE --------------------------------------------------- */
+#formulaire{
+    background: rgb(9, 168, 189);
+    margin-top: 30px;
+    width: 50%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#name-firstName{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+
+input{
+    margin-left: 20px;
+    width: 40vh;
+    height: 3vh;
+    font-size: 1.8em;
+}
+
+#form-mail input{
+    width: 83vh;
+    height: 3vh;
+}
+textarea{
+    margin-left: 20px;
+    font-size: 2em;
+    width: 79.2%;
+    height: 30vh;
+}
+#form-button{
+    text-align: right;
+    margin-right: 18%;
+    font-size: 1.8em;
+}
+#button-formulaire{
+    font-size: 1em;
+    width: 10vh;
+    height: 6vh;
 }
